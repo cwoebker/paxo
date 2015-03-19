@@ -1,0 +1,22 @@
+language: python
+python:
+  - "2.6"
+  - "2.7"
+  - "pypy"
+#  - "3.2"
+#  - "3.3" # not sure
+#  - "3.4"
+#  - "pypy3"
+#  - "nightly"
+
+before_install:
+  - pip install -r reqs.txt --use-mirrors
+install:
+  - python setup.py install
+
+before_script:
+  - pip install nose2
+
+script:
+  - nose2 --verbose test_paxo
+
