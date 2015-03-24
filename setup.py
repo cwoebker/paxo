@@ -4,7 +4,7 @@
 import os
 import sys
 
-from paxo import __author__, __license__, __title__, __version__
+import paxo
 try:
     from setuptools import setup
 except ImportError:
@@ -21,14 +21,14 @@ with open('reqs.txt') as f:
 settings = dict()
 
 settings.update(
-    name=__title__,
-    version=__version__,
+    name=paxo.__title__,
+    version=paxo.__version__,
     description='paxo: python ♡ terminal',
     long_description=(open('README.md').read()),
-    author=__author__,
+    author=paxo.__author__,
     author_email='me@cwoebker.com',
     url='https://github.com/cwoebker/paxo',
-    license=__license__,
+    license=paxo.__license__,
     install_requires=required,
     tests_require=['nose'],
     packages=[

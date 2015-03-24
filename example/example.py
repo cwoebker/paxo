@@ -8,7 +8,7 @@ __license__ = 'MIT'
 __copyright__ = '(c) 2015 Cecil Woebker'
 """
 
-from paxo import Paxo
+from paxo.core import Paxo
 from paxo.command import cmd
 
 

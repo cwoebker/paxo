@@ -7,7 +7,7 @@ import unittest
 
 from clint import arguments
 
-from paxo import Paxo
+from paxo.core import Paxo
 from paxo.command import Command, cmd, define_command, Collection
 from paxo.util import ExitStatus, is_win, is_lin, is_osx, args
 
