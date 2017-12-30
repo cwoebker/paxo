@@ -53,6 +53,7 @@ class PaxoTestCase(AbstractTestCase):
         self.assertEqual(self.paxo.description, 'a test paxo')
         self.assertEqual(self.paxo.command_info, '<do this>')
         self.assertEqual(self.paxo.version, '0.1')
+        self.assertEqual(self.paxo.__class__, '') # verify this later with Juan
 
     def test_info(self):
         pass
