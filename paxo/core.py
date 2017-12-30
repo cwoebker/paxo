@@ -56,7 +56,7 @@ class Paxo(object):
                     self.dynamic_action(args)
             else:
                 self.default_action(args)
-        return ExitStatus.OK
+        return ExitStatus.OK # ExitStatus is defined centrally and has to be adjusted at any point
 
     @staticmethod
     def execute(command):

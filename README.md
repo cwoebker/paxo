@@ -2,7 +2,11 @@
 
 [`paxo`](https://github.com/cwoebker/paxo) is a small library that makes it fast and easy to create simple python command line tools.
 
-[![Status unavailable](https://secure.travis-ci.org/cwoebker/paxo.png?branch=master)](http://travis-ci.org/cwoebker/paxo)
+[![PyPI Version](https://img.shields.io/pypi/v/paxo.svg)](https://pypi.python.org/pypi/paxo)
+[![Build Status](https://secure.travis-ci.org/cwoebker/paxo.png?branch=master)](http://travis-ci.org/cwoebker/paxo)
+[![PyPI License](https://img.shields.io/pypi/l/paxo.svg)](https://pypi.python.org/pypi/paxo)
+[![PyPI Python Versions](https://img.shields.io/pypi/pyversions/paxo.svg)](https://pypi.python.org/pypi/paxo)
+[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/cwoebker)
 
 ---
 
@@ -64,7 +68,7 @@ If you want to know even more make sure to check out the source code or look at 
 - Manage app configuration
 - Manage app data
 - Loose dependencies and become standalone
-- Support for command line options (ala `-o, `-a`, `-u`)
+- Support for command line options (ala `-o`, `-a`, `-u`)
 - Extended documentation feature - Create man pages
 - Cross Platform support
     - Additional decorator for OS support
@@ -86,5 +90,5 @@ Follow [@cwoebker](http://twitter.com/cwoebker)
 
 ---
 
-Copyright (c) 2015, Cecil Woebker.
+Copyright (c) 2015-2018, Cecil Woebker.
 License: BSD (see LICENSE for details)
