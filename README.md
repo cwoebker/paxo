@@ -21,7 +21,7 @@ Well, for me paxo is not just a command line library managing your arguments and
 I hope that in the Future it will be able to handle everything documentation, manage all application configuration and data and be fully customizable so that you can create your own themes for a terminal app.
 If you just want a simple library to take care for shell arguments for you there are many other options available to you.
 
-![Paxo Terminal](http://cwoebker.com/assets/img/posts/paxo.jpg)
+![Paxo Terminal](https://cwoebker.com/assets/img/posts/paxo.jpg)
 
 ## Installation ##
 
@@ -31,8 +31,8 @@ It's as simple as:
 
 ## Usage ##
 
-Paxo is really easy to use for anyone, whether you want to start quickly or customize your command line application to your own needs entirely. You can see `paxo` in action with some of my side projects. (e.g. [pen](http://github.com/cwoebker/pen) or [como](http://github.com/cwoebker/como)).
-You can find a [minimalistic script](http://github.com/cwoebker/paxo) that makes use of this library inside the project's example folder:
+Paxo is really easy to use for anyone, whether you want to start quickly or customize your command line application to your own needs entirely. You can see `paxo` in action with some of my side projects. (e.g. [pen](https://github.com/cwoebker/pen) or [como](https://github.com/cwoebker/como)).
+You can find a [minimalistic script](https://github.com/cwoebker/paxo) that makes use of this library inside the project's example folder:
 
     from paxo import Paxo
     from paxo.command import cmd
@@ -84,9 +84,9 @@ it to be. If you have any questions or would like some new features please let m
 
 ---
 
-For questions and suggestions, feel free to shoot me an email <me@cwoebker.com>
+For questions and suggestions, feel free to shoot me an email at <me@cwoebker.com>.
 
-Follow [@cwoebker](http://twitter.com/cwoebker)
+Also, follow or tweet [@cwoebker](https://twitter.com/cwoebker).
 
 ---
 
