@@ -9,7 +9,7 @@ from clint import resources
 
 from paxo import __author__
 from paxo.command import define_command, Collection
-from paxo.util import args, show_error, ExitStatus
+from paxo.util import args, show_error, ExitStatus, XDG_DATA_HOME
 from paxo.storage import storage
 
 
@@ -25,7 +25,11 @@ class Paxo(object):
         resources.init(__author__, self.name)
 
         if self.store:
-            path = resources.user.read('path.ini') or os.path.expanduser('~/.'+self.name)  # TODO: make this more general
+            path = os.path.expanduser('~/.'+self.name)
+            if XDG_DATA_HOME:
+                path = os.path.join(XDG_DATA_HOME, "pen/pen")
+            path = resources.user.read('path.ini') or path
+            # TODO: make this more general
             self.store.setPath(path)
             self.store.bootstrap()
 
