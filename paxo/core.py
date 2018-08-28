@@ -25,9 +25,9 @@ class Paxo(object):
         resources.init(__author__, self.name)
 
         if self.store:
-            path = os.path.expanduser('~/.'+self.name)
-            if XDG_DATA_HOME:
-                path = os.path.join(XDG_DATA_HOME, "pen/pen")
+            # path = os.path.expanduser('~/.'+self.name)
+            # if XDG_DATA_HOME:
+            path = os.path.join(XDG_DATA_HOME, self.name, self.name)
             path = resources.user.read('path.ini') or path
             # TODO: make this more general
             self.store.setPath(path)

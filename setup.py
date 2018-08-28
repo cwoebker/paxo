@@ -3,6 +3,8 @@
 
 # Note: To use the 'upload' functionality of this file, you must:
 #   $ pip install twine
+# Note: also necessary for building the code:
+#   $ pip install wheel
 
 import io
 import os
@@ -19,7 +21,7 @@ DESCRIPTION = 'paxo: python ♡ terminal'
 URL = 'https://github.com/cwoebker/paxo'
 EMAIL = 'me@cwoebker.com'
 AUTHOR = paxo.__author__
-REQUIRES_PYTHON = '>=2.5.0'
+REQUIRES_PYTHON = '>=2.7.0'
 VERSION = paxo.__version__
 LICENSE = paxo.__license__
 
