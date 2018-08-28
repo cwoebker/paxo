@@ -17,7 +17,8 @@ notifications:
     #on_failure: change # [always|never|change] # default: always
 
 before_install:
-  - pip install -r reqs.txt
+  - pip install pipenv
+  - pipenv install
 install:
   - python setup.py install
 
