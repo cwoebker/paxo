@@ -29,6 +29,9 @@ class Paxo(object):
             # if XDG_DATA_HOME:
             path = os.path.join(XDG_DATA_HOME, self.name, self.name)
             path = resources.user.read('path.ini') or path
+            path_dir = os.path.dirname(path)
+            if not os.path.exists(path_dir):
+                os.makedirs(path_dir)
             # TODO: make this more general
             self.store.setPath(path)
             self.store.bootstrap()
