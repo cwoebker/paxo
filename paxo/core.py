@@ -82,12 +82,12 @@ class Paxo(object):
         for command in Collection.list_commands():
             usage = command.usage or command.name
             text = command.help or ''
-            puts('{0:45} {1}'.format(colored.green(usage), text))
+            puts('{0} {1}'.format(colored.green(usage), text))
 
     def cmd_help(self, args):
         command = args.get(0)
         if command is None:
-            self.display_info()
+            self.display_info(args)
             return
         elif not Collection.lookup_command(command):
             command = 'help'

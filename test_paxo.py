@@ -84,7 +84,7 @@ class CommandManagerTestCase(AbstractTestCase):
     def test_cmd_decorator_command(self):
         @cmd()
         def hello(args):
-            print 'Hello World!'
+            print('Hello World!')
         self.assertEqual(hello, Collection.lookup_command('hello').fn)
 
     def test_list_commands(self):
@@ -130,6 +130,7 @@ class StorageTestCase(AbstractTestCase):
 
 class AutoStartTestCase(AbstractTestCase):
     pass
+
 
 if __name__ == '__main__':
     unittest.main()

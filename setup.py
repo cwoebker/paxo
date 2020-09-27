@@ -21,7 +21,7 @@ DESCRIPTION = 'paxo: python ♡ terminal'
 URL = 'https://github.com/cwoebker/paxo'
 EMAIL = 'me@cwoebker.com'
 AUTHOR = paxo.__author__
-REQUIRES_PYTHON = '>=2.7.0'
+REQUIRES_PYTHON = '>=3.6.0'
 VERSION = paxo.__version__
 LICENSE = paxo.__license__
 
@@ -131,7 +131,10 @@ setup(
         'Topic :: Utilities',
         'Topic :: Text Processing',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy'
     ],

@@ -2,6 +2,7 @@
 paxo.command - cli done the right way
 """
 
+
 class Collection(object):
     COMMANDS = []
 
@@ -44,7 +45,7 @@ class Command(object):
 
 def define_command(fn, name=None, short=None, usage=None, help=None):
     if not name:
-        name = str(fn.func_name).replace("cmd_", "", 1)
+        name = str(fn.__name__).replace("cmd_", "", 1)
     if not short:
         short = name
     if not usage:

@@ -8,6 +8,7 @@ import zlib
 from collections import OrderedDict
 from contextlib import contextmanager
 
+
 @contextmanager
 def storage(store=None):
     if store:
@@ -30,16 +31,17 @@ class SimpleStorage(AbstractStorage):
         self.path = path
 
     def __write__(self):
-        open(self.path, 'w').write(zlib.compress(json.dumps(self.data)))
+        with open(self.path, 'wb') as store:
+            store.write(zlib.compress(json.dumps(self.data).encode('utf-8')))
 
     def bootstrap(self):
         if not os.path.exists(self.path):
             self.__write__()
         else:
-            with open(self.path, 'r') as store:
-                path = json.loads(
-                    zlib.decompress(store.read()),
-                    object_pairs_hook=OrderedDict).get("__PATH__")
+            with open(self.path, 'rb') as store:
+                tmp = zlib.decompress(store.read())
+                jsontmp = json.loads(tmp, object_pairs_hook=OrderedDict)
+                path = jsontmp.get("__PATH__")
                 if path:
                     self.path = path
                     self.__write__()
@@ -49,10 +51,9 @@ class SimpleStorage(AbstractStorage):
             self.path = path
 
     def read(self):
-        with open(self.path, 'r') as store:
-            self.data = json.loads(zlib.decompress(store.read()),
-                                   object_pairs_hook=OrderedDict)
+        with open(self.path, 'rb') as store:
+            self.data = json.loads(zlib.decompress(store.read()), object_pairs_hook=OrderedDict)
 
     def save(self):
-        with open(self.path, 'w') as store:
-            store.write(zlib.compress(json.dumps(self.data)))
+        with open(self.path, 'wb') as store:
+            store.write(zlib.compress(json.dumps(self.data).encode('utf-8')))
